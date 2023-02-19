@@ -1,0 +1,516 @@
+@font-face {
+    font-family: inter-variable;
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inter-variable;
+}
+
+body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.front {
+    position: absolute;
+    transform: translateX(-12.1rem);
+    top: 7rem;
+}
+
+.front img {
+    width: 84%;
+}
+
+.back img {
+    width: 84%;
+}
+
+.inner .card-logo {
+    position: absolute;
+    top: 0.1rem;
+    padding: .4rem 1.7rem;
+    width: 25%;
+}
+
+.inner #card-text {
+    position: absolute;
+    top: 7rem;
+    left: 2.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    color: hsl(0, 0%, 100%);
+} 
+
+.inner #card-holder {
+    position: absolute;
+    top: 10.3rem;
+    /* transform: translate(-0.1%, -70%); */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: .2rem 2.1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.inner #exp-mth {
+    position: absolute;
+    top: 10.3rem;
+    right: 5rem;
+    padding: .1rem 1.1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.back {
+    position: relative;
+    top: 1rem;
+    left: -8rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.back #cvc-text {
+    position: absolute;
+    top: 6rem;
+    right: 7rem;
+    padding-bottom: .3rem;
+    font-size: 0.8rem;
+    letter-spacing: 1.1px;
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    margin: -20rem 0 0 40rem;
+    width: 20%;
+    letter-spacing: 0px;
+}
+
+.final img {
+    width: 40%;
+    margin: 0 0 1rem 2.1rem;
+}
+
+.final h3 {
+    font-size: 2rem;
+}
+
+
+.final p {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+}
+
+.final-content button {
+    margin-top: 1rem;
+    padding: .5rem;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.final a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+    .final {
+        margin-left: 40rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .front {
+        position: absolute;
+        left: 20rem;
+    }
+
+    .back {
+        position: absolute;
+        left: 8.2rem;
+        top: 25rem;
+    }
+
+    .final {
+        margin-top: 1%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .card-container {
+        width: 20px;
+    }
+
+    .card-container > .front {
+        position: absolute;
+        left: 30%;
+    }
+
+    .card-container  .back {
+        position: absolute;
+        left: 15%;
+    }
+
+}
+
+@media screen and (max-width: 888px){
+    body{
+        background-image: url(../images/bg-main-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .front {
+        transform: translateY(5vmin);
+        box-sizing: border-box;
+    }
+    .front, .back {
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        height: 10rem;
+    }
+    
+    
+    .back {
+        position: relative;
+        top: 3rem;
+        left: 6rem;
+        box-shadow: 25px 20px 100px -50px hsl(274, 4%, 33%);
+        z-index: -2;
+    }
+
+    .back img {
+        position: absolute;
+    }
+
+    .front img {
+        position: absolute;
+        left: -2.6rem;
+    }
+
+    .front {
+        position: absolute;
+        top: 8.5rem;
+        left: 7.6rem;
+    }
+
+    .container {
+        width: 35%;
+        max-width: 1500px;
+        height: 100vh;
+        display: flex;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        height: 100%;
+        background-image: url(../images/bg-main-mobile.png);
+    }
+
+
+    .inner .card-logo {
+        width: 8em;
+    }
+
+    .front img {
+        width: 22em;
+    }
+
+    .back img {
+        width: 22em;
+    } 
+
+    .front .inner {
+        padding: 0;
+    }
+
+    .inner #card-text {
+        font-size: 1.3rem;
+        padding: 0;
+        top: 6.2rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #card-holder {
+        font-size: 1rem;
+        padding: 0;
+        top: 9.8rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #exp-mth {
+        top: 9.7rem;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        right: 1.8rem;
+    }
+
+    .back #cvc-text {
+        top: 5.5rem;
+        right: 1rem;
+    }
+
+    .final {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        margin: 40% 0 0 0;
+        padding: 9rem 0 9rem 0;
+        z-index: -99999;
+    }
+
+
+    .final-content {
+        margin: 0% 0 0 10rem;
+        padding: 4rem 0rem;
+        background-color: white;
+        width: 50%;
+        margin-left: 5rem;
+    }
+
+    .final-content img {
+        margin-left: 1rem;
+    }
+
+    .final-content h3 {
+        margin-left: 10px;
+    }
+
+    .final-content p {
+        margin-left: -1rem;
+    }
+
+    .final-content button {
+        margin-left: -5px;
+    }
+
+    #btn {
+        padding: 1.2rem;
+    }
+
+ }   
+
+
+@media screen and (max-width: 475px) {
+    .back {
+        position: relative;
+        top: 0rem;
+        left: 6rem;
+        box-shadow: 25px 20px 100px -50px hsl(274, 4%, 33%);
+        z-index: -2;
+    }
+
+    .front {
+        /* position: absolute; */
+        transform: translate(0);
+        top: 7rem;
+    }
+
+    .inner .card-logo {
+        width: 6em;
+    }
+
+    .front img {
+        width: 19em;
+        left: -2rem;
+    }
+
+    .back img {
+        width: 19em;
+    } 
+
+    .front .inner {
+        padding: 0;
+    }
+
+    .inner #card-text {
+        font-size: 1.1rem;
+        padding: 0;
+        top: 5.8rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #card-holder {
+        font-size: .86rem;
+        padding: 0;
+        top: 8.3rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #exp-mth {
+        top: 8.6rem;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        right: 3.4rem;
+    }
+
+    .back #cvc-text {
+        top: 4.2rem;
+        right: 3rem;
+    }
+
+    .final {
+        margin-top: 120px;
+        background-color: white;
+    }
+
+    .final-content {
+        margin: auto;
+    }
+
+    .final-content img {
+        margin-left: 3rem;
+    }
+
+    .final-content h3 {
+        margin-left: 1rem;
+    }
+
+    .final-content button {
+        margin-left: -3px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .back {
+        position: relative;
+        top: 2rem;
+        left: 6rem;
+        z-index: -2;
+    }
+
+    .front {
+        position: absolute;
+        top: 9rem;
+        left: 1rem;
+    }
+
+    .inner .card-logo {
+        width: 6em;
+    }
+
+    .front img {
+        width: 17em;
+        left: -1rem;
+    }
+
+    .back img {
+        width: 17em;
+    } 
+
+    .front .inner {
+        padding: 0;
+    }
+
+    .inner #card-text {
+        font-size: 1.1rem;
+        padding: 0;
+        top: 5.2rem;
+        position: absolute;
+        left: 0rem;
+    }
+
+    .inner #card-holder {
+        font-size: .78rem;
+        padding: 0;
+        top: 7.3rem;
+        position: absolute;
+        left: 0rem;
+    }
+
+    .inner #exp-mth {
+        top: 7.78rem;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        right: 4.3rem;
+    }
+
+    .back #cvc-text {
+        top: 3.6rem;
+        right: 4.9rem;
+    }
+
+    .final {
+        margin-top: 190px;
+        background-color: white;
+        width: 150vw;
+    }
+
+    .final-content {
+        margin: auto;
+        /* width: 100vw; */
+        /* background-color: white; */
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .back {
+        position: relative;
+        top: 1rem;
+        left: 6rem;
+        z-index: -2;
+    }
+
+    .front {
+        position: absolute;
+        top: 7rem;
+    }
+
+    .front img {
+        left: 1rem;
+    }
+
+
+    .inner #card-text {
+        left: 1.8rem;
+        top: 5rem;
+    }
+
+    .inner #card-holder {
+        left: 1.8rem;
+    }
+
+    .inner #exp-mth {
+        right: 2rem;
+    }
+
+    .final {
+        margin-left: 4.1rem;
+    }
+
+    .cvc {
+        margin-top: 1.5rem;
+    }
+
+}

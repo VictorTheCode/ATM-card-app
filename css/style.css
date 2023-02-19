@@ -1,0 +1,535 @@
+@font-face {
+    font-family: inter-variable;
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inter-variable;
+}
+
+body {
+    background-image: url(../images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.front img {
+    width: 84%;
+}
+
+.back img {
+    width: 84%;
+}
+
+.front {
+    position: absolute;
+    left: 12rem;
+    top: 6rem;
+    z-index: 2;
+    /* transform: translate(-50%, -50%); */
+    color: hsl(0, 0%, 100%);
+}
+
+.inner .card-logo {
+    position: absolute;
+    top: 1rem;
+    padding: .4rem 1.7rem;
+    width: 23%;
+}
+
+.inner #card-text {
+    position: absolute;
+    top: 6rem;
+    left: 2.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+} 
+
+.inner #card-holder {
+    position: absolute;
+    top: 10rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: .2rem 2.1rem;
+}
+
+.inner #exp-mth {
+    position: absolute;
+    top: 10.5rem;
+    right: 5rem;
+    letter-spacing: 2px;
+    padding: .1rem 1.1rem;
+}
+
+.back {
+    position: absolute;
+    top: 25rem;
+    left: 17rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.back #cvc-text {
+    position: absolute;
+    top: 5.3rem;
+    right: 7rem;
+    padding-bottom: .3rem;
+    font-size: 0.8rem;
+    letter-spacing: 1.1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40rem;
+    width: 18rem;
+    letter-spacing: 1px;
+}
+
+form label, p {
+    font-size: .9rem;
+    margin: 0.5rem 0;
+}
+
+form input[type="text"] {
+    border: 1px solid hsl(270, 3%, 87%);
+    padding: 0.7rem 0.7rem;
+    border-radius: 5px;
+}
+
+
+input{
+    appearance: none;
+    margin-top: .3rem;
+    padding-left: 1rem;
+    height: 2.25rem;
+    border-radius: .5rem;
+    border: solid 1px rgb(190, 187, 187);
+    outline: none;
+}
+
+input::placeholder{
+    color: hsl(270, 3%, 87%);
+}
+
+input:focus{
+    border: 1px solid  hsl(249, 99%, 64%);
+}
+
+.error {
+    border: 2px solid  red;
+}
+
+.error-text {
+    gap: 0;
+}
+
+.error-text::after {
+    content: "input can't be empty";
+    color: red;
+    margin-top: 0.2rem;
+    font-size: .6rem;
+}
+
+.month-year-cvc {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+.month-year-cvc div {
+    width: 100%;
+}
+
+.month-year {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.month-year input {
+    width: 90%;
+}
+
+.month-year-cvc > div input {
+    width: 100%;
+}
+
+/* .cvc {
+    display: grid;
+} */
+
+.cvc {
+    margin-top: 0.5rem;
+}
+
+.cvc input {
+    margin-top: 0.6rem;
+}
+
+
+button {
+    margin-top: 1.3rem;
+    padding: .5rem;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+    form {
+        margin-left: 40rem;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    .card-container {
+        width: 20px;
+    }
+
+    .card-container .front {
+        position: absolute;
+        left: 20%;
+    }
+
+    .card-container  .back {
+        position: absolute;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .card-container {
+        width: 20px;
+    }
+
+    .card-container .front {
+        position: absolute;
+        left: 15%;
+    }
+
+    .card-container  .back {
+        position: absolute;
+        left: 15%;
+    }
+
+    .form-box {
+        margin: 0 6rem 12rem 0;
+        
+
+    }
+}
+
+@media screen and (max-width: 888px){
+    body{
+        background-image: url(../images/bg-main-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+/* 
+    img {
+        display: none;
+    } */
+
+
+    .front {
+        transform: translateY(5vmin);
+        box-sizing: border-box;
+
+    }
+    .front, .back {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        height: 10rem;
+    }
+    
+    
+    .back {
+        position: relative;
+        top: 2rem;
+        left: 6rem;
+        box-shadow: 25px 20px 100px -50px hsl(274, 4%, 33%);
+        z-index: 1;
+    }
+
+    .back img {
+        position: absolute;
+    }
+
+    .front img {
+        position: absolute;
+        left: -2.6rem;
+    }
+
+    .front {
+        position: absolute;
+        top: 9rem;
+    }
+
+    .container {
+        width: 35%;
+        max-width: 1500px;
+        height: 100vh;
+        display: flex;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        height: 100%;
+        background-image: url(../images/bg-main-mobile.png);
+    }
+
+
+    .inner .card-logo {
+        width: 8em;
+    }
+
+    .front img {
+        width: 22em;
+    }
+
+    .back img {
+        width: 22em;
+    } 
+
+    .front .inner {
+        padding: 0;
+    }
+
+    .inner #card-text {
+        font-size: 1.3rem;
+        padding: 0;
+        top: 6.3rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #card-holder {
+        font-size: 1rem;
+        padding: 0;
+        top: 8.9rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #exp-mth {
+        top: 9.2rem;
+        right: 1rem;
+        letter-spacing: 1px;
+        font-size: 1rem;
+    }
+
+    .back #cvc-text {
+        top: 5rem;
+        right: 1rem;
+    }
+
+
+
+    .form-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        margin: 40% 0 0 0;
+        padding: 9rem 0 9rem 0;
+        /* z-index: -99999; */
+    }
+
+
+    form {
+        margin: 0% 0 0 0;
+        background-color: white;
+        padding: 2rem;
+        width: 40rem;
+        margin-left: 0rem;
+    }
+
+    #submit {
+        padding: 1.2rem;
+    }
+
+ }   
+
+
+@media screen and (max-width: 475px) {
+    .back {
+        position: relative;
+        top: 1rem;
+        left: 6rem;
+        box-shadow: 25px 20px 100px -50px hsl(274, 4%, 33%);
+        z-index: 1;
+    }
+
+    .front {
+        transform: translate(0);
+        top: 7rem;
+    }
+
+    .inner .card-logo {
+        width: 6em;
+    }
+
+    .front img {
+        width: 19em;
+        left: -2rem;
+    }
+
+    .back img {
+        width: 19em;
+    } 
+
+    .front .inner {
+        padding: 0;
+    }
+
+    .inner #card-text {
+        font-size: 1.1rem;
+        padding: 0;
+        top: 5.8rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #card-holder {
+        font-size: .86rem;
+        padding: 0;
+        top: 8.3rem;
+        position: absolute;
+        left: -1rem;
+    }
+
+    .inner #exp-mth {
+        top: 8.6rem;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        right: 3.4rem;
+    }
+
+    .back #cvc-text {
+        top: 4.2rem;
+        right: 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .back {
+        position: relative;
+        top: 2rem;
+        left: 6rem;
+        z-index: 1;
+    }
+
+    .front {
+        position: absolute;
+        top: 9rem;
+        left: 1rem;
+        z-index: 19;
+    }
+
+    .inner .card-logo {
+        width: 6em;
+    }
+
+    .front img {
+        width: 17em;
+        left: -1rem;
+    }
+
+    .back img {
+        width: 17em;
+    } 
+
+    .front .inner {
+        padding: 0;
+    }
+
+    .inner #card-text {
+        font-size: 1.1rem;
+        padding: 0;
+        top: 4.5rem;
+        position: absolute;
+        left: 0rem;
+    }
+
+    .inner #card-holder {
+        font-size: .78rem;
+        padding: 0;
+        top: 7.3rem;
+        position: absolute;
+        left: 0rem;
+    }
+
+    .inner #exp-mth {
+        top: 7.78rem;
+        letter-spacing: 1px;
+        font-size: .8rem;
+        right: 4.3rem;
+    }
+
+    .back #cvc-text {
+        top: 3.6rem;
+        right: 4.9rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .back {
+        position: relative;
+        top: 1rem;
+        left: 6rem;
+        z-index: 1;
+    }
+
+    .front {
+        position: absolute;
+        top: 7rem;
+    }
+
+    .front img {
+        left: 1rem;
+    }
+
+
+    .inner #card-text {
+        left: 1.8rem;
+        top: 5rem;
+    }
+
+    .inner #card-holder {
+        left: 1.8rem;
+    }
+
+    .inner #exp-mth {
+        right: 2rem;
+    }
+
+    .form-box {
+        margin-left: 4.1rem;
+    }
+
+    .cvc {
+        margin-top: 1.5rem;
+    }
+
+}
